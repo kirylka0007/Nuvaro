@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 function LinkedInIcon({ size = 20 }: { size?: number }) {
   return (
     <svg
@@ -17,14 +19,14 @@ function LinkedInIcon({ size = 20 }: { size?: number }) {
 
 function Logo() {
   return (
-    <div className="flex items-center gap-2.5">
-      <div
-        className="gradient-bg w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-        aria-hidden="true"
-      >
-        <span className="text-white font-bold text-sm leading-none select-none">N</span>
-      </div>
-      <span className="font-bold text-white text-lg leading-none">Nuvaro</span>
+    <div className="bg-white rounded-lg px-2 py-1 w-fit">
+      <Image
+        src="/Logo.png"
+        alt="Nuvaro — AI Automation, Process Mining, Tech Consulting"
+        width={160}
+        height={46}
+        className="h-10 w-auto object-contain"
+      />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const navLinks = [
   { label: 'Flow', href: '#flow' },
@@ -12,14 +13,17 @@ const navLinks = [
 
 function Logo() {
   return (
-    <a href="#" className="flex items-center gap-2.5 group" aria-label="Nuvaro home">
-      <div
-        className="gradient-bg w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-        aria-hidden="true"
-      >
-        <span className="text-white font-bold text-sm leading-none select-none">N</span>
+    <a href="#" className="flex items-center" aria-label="Nuvaro home">
+      <div className="bg-white rounded-lg px-2 py-1">
+        <Image
+          src="/Logo.png"
+          alt="Nuvaro — AI Automation, Process Mining, Tech Consulting"
+          width={140}
+          height={40}
+          className="h-9 w-auto object-contain"
+          priority
+        />
       </div>
-      <span className="font-bold text-white text-lg leading-none">Nuvaro</span>
     </a>
   );
 }
