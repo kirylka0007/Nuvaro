@@ -70,27 +70,24 @@ export default function Hero() {
           Intelligent automation for modern finance &amp; operations teams.
         </h1>
 
-        {/* Brand logo — centred, large, spotlight dissolve */}
-        <div className="relative mb-10 flex justify-center">
-          {/* Radial spotlight fades the logo's white background into the dark navy */}
+        {/* Brand logo — centred, large */}
+        <div className="mb-10 flex justify-center">
           <div
-            className="absolute inset-0 pointer-events-none"
+            className="rounded-2xl px-10 py-5 inline-flex items-center justify-center"
             style={{
-              background:
-                'radial-gradient(ellipse 100% 100% at 50% 50%, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.08) 45%, transparent 72%)',
-              borderRadius: '50%',
-              transform: 'scale(1.6)',
+              background: 'rgba(255,255,255,0.97)',
+              boxShadow: '0 0 0 1px rgba(255,255,255,0.15), 0 24px 64px rgba(0,0,0,0.45), 0 0 80px rgba(30,127,216,0.15)',
             }}
-            aria-hidden="true"
-          />
-          <Image
-            src="/Logo.png"
-            alt="Nuvaro — AI Automation, Process Mining, Tech Consulting"
-            width={380}
-            height={110}
-            className="relative h-28 w-auto object-contain"
-            priority
-          />
+          >
+            <Image
+              src="/Logo.png"
+              alt="Nuvaro — AI Automation, Process Mining, Tech Consulting"
+              width={420}
+              height={120}
+              className="h-36 w-auto object-contain"
+              priority
+            />
+          </div>
         </div>
 
         {/* Subheading */}
