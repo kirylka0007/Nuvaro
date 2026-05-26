@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
 import GradientButton from '@/components/ui/GradientButton';
 import OutlineButton from '@/components/ui/OutlineButton';
@@ -60,23 +61,37 @@ export default function Hero() {
       />
 
       <div className="relative max-w-7xl mx-auto w-full text-center flex flex-col items-center">
-        {/* Badge chip */}
-        <div className="inline-flex items-center gap-2 bg-navy-700 border border-navy-600 text-xs text-slate-400 px-4 py-1.5 rounded-full mb-8">
-          <span
-            className="w-2 h-2 rounded-full flex-shrink-0"
-            style={{ background: 'linear-gradient(135deg, #1E7FD8, #00D4FF)' }}
-            aria-hidden="true"
-          />
-          AI Automation · Process Mining · Tech Consulting
-        </div>
 
         {/* Headline */}
         <h1
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6 mx-auto"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-10 mx-auto"
           style={{ maxWidth: '900px' }}
         >
           Intelligent automation for modern finance &amp; operations teams.
         </h1>
+
+        {/* Brand logo — centred, large, spotlight dissolve */}
+        <div className="relative mb-10 flex justify-center">
+          {/* Radial spotlight fades the logo's white background into the dark navy */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'radial-gradient(ellipse 100% 100% at 50% 50%, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.08) 45%, transparent 72%)',
+              borderRadius: '50%',
+              transform: 'scale(1.6)',
+            }}
+            aria-hidden="true"
+          />
+          <Image
+            src="/Logo.png"
+            alt="Nuvaro — AI Automation, Process Mining, Tech Consulting"
+            width={380}
+            height={110}
+            className="relative h-28 w-auto object-contain"
+            priority
+          />
+        </div>
 
         {/* Subheading */}
         <p className="text-lg text-slate-400 mb-16 max-w-xl mx-auto">
